@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"time"
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
@@ -53,7 +54,11 @@ func Init(name string) error {
 	return nil
 }
 func main() {
-	Init("")
-	fmt.Println("DB config", viper.GetString("PORT"))
-	fmt.Println(viper.AllSettings())
+	for {
+		Init("")
+		fmt.Println("DB config", viper.GetString("PORT"))
+		fmt.Println(viper.AllSettings())
+		time.Sleep(1 * time.Second)
+	}
+
 }
