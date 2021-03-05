@@ -1,0 +1,9 @@
+mode: debug
+port: :9090
+url: http://167.99.155.35:9090
+max_check_count: 10
+database:
+  name: happy_mall
+  host: 167.99.155.35:3306
+  username: root
+  password: Xss8271329.X
