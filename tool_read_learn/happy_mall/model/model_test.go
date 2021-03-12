@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"testing"
+	"time"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
@@ -60,6 +61,29 @@ func TestQuery(t *testing.T) {
 	fmt.Println(&ba)
 	db.Find(&bas) //查询Banner列表 =select * from banner;
 	fmt.Println(&bas)
+}
+
+type User struct {
+	UserId    string    `json:"userId" gorm:"column:user_id"`
+	NickName  string    `json:"nickName" gorm:"column:nick_name"`
+	Mobile    string    `json:"mobile" gorm:"column:mobile" binding:"required"`
+	Password  string    `json:"password" gorm:"column:password"`
+	Address   string    `json:"address" gorm:"column:address"`
+	IsDeleted bool      `json:"isDeleted" gorm:"column:is_deleted"`
+	IsLocked  bool      `json:"isLocked" gorm:"column:is_locked"`
+	CreateAt  time.Time `json:"createAt" gorm:"column:create_at;default:null"`
+	UpdateAt  time.Time `json:"updateAt" gorm:"column:update_at;default:null"`
+}
+
+func TestGetUserList(t *testing.T) {
+	var users []*User
+	db, _ := gorm.Open("mysql", "root:Xss8271329.X@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
+	defer db.Close()
+	db.SingularTable(true)
+	if err := db.Find(&users).Error; err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(users)
 }
 
 //数据库更新
