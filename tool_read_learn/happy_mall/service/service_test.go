@@ -25,27 +25,27 @@ type UserRepository struct {
 }
 
 type UserRepoInterface interface {
-	List(req *ListQuery) (user []User, err error)
+	List(req *ListQuery) (users []*User, err error)
 }
 
 func (repo *UserRepository) List(req *ListQuery) (users []*User, err error) {
 	fmt.Println(req)
 	db := repo.DB
-	if err := db.Order("id desc").Find(&users).Error; err != nil {
+	if err := db.Order("user_id desc").Find(&users).Error; err != nil {
 		return nil, err
 	}
 	return users, nil
 }
 
 type UserSrv interface {
-	List(req *ListQuery) (users []User, err error)
+	List(req *ListQuery) (users []*User, err error)
 }
 
 type UserService struct {
 	Repo UserRepoInterface
 }
 
-func (srv *UserService) list(req *ListQuery) (users []User, err error) {
+func (srv *UserService) List(req *ListQuery) (users []*User, err error) {
 	if req.PageSize < 1 {
 		req.PageSize = 0
 	}
@@ -59,10 +59,13 @@ type ListQuery struct {
 
 func TestService(t *testing.T) {
 	db, _ := gorm.Open("mysql", "root:Xss8271329.X@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
-	d := UserRepository{db}
-	//d.DB.SingularTable(true)
+	d := &UserRepository{db}
+	d.DB.SingularTable(true)
 	repo := UserService{d}
 	query := ListQuery{1, 1}
-	result, err := repo.list(&query)
-	fmt.Println(result, err)
+	result, err := repo.List(&query)
+	fmt.Println(*result[1], err)
+	for _, i := range result {
+		fmt.Println(*i)
+	}
 }
