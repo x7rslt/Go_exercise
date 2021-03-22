@@ -19,3 +19,24 @@ func Test(t *testing.T) {
 		fmt.Printf("%d,%q\n", i, j)
 	}
 }
+
+//定义IP地址的打印格式
+
+type IP [4]int
+
+func (i IP) String() {
+	fmt.Sprintf("IP:%d.%d.%d.%d", i[0], i[1], i[2], i[3])
+}
+
+func TestIP(t *testing.T) {
+	localhost := IP{127, 0, 0, 1}
+	localhost.String()
+	hosts := map[string]IP{
+		"localhost": {127, 0, 0, 1},
+		"googleDNS": {8, 8, 8, 8},
+	}
+	for name, ip := range hosts {
+		fmt.Printf("%v:%v\n", name, ip)
+	}
+
+}
