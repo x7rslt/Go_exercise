@@ -3,16 +3,27 @@
 package main
 
 import (
+	"bufio"
 	"encoding/csv"
 	"fmt"
 	"io"
 	"log"
 	"os"
+	"testing"
 )
 
-func main() {
+func TestBufioread(t *testing.T) {
+	reader := bufio.NewReader(os.Stdin)
+	input, err := reader.ReadString('\n')
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(input)
+}
+
+func TestCsv(t *testing.T) {
 	//准备读取文件
-	fileName := "/Users/xiaoshuai/go/src/exercise/top.csv"
+	fileName := "./top.csv"
 	fs, err := os.Open(fileName)
 	if err != nil {
 		log.Fatalf("can not open the file, err is %+v", err)
