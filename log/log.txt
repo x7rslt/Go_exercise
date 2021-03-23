@@ -1,0 +1,4 @@
+Log:Log file create.
+Log:Use Printf and format strings. 10 + 20 = 30
+Log2:2021/03/23 log_test.go:44: Log file create.
+Log2:2021/03/23 log_test.go:45: Use Printf and format strings. 10 + 20 = 30
