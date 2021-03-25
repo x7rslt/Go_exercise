@@ -1,6 +1,4 @@
-//逐行读取.csv文件
-
-package main
+package read_test
 
 import (
 	"bufio"
@@ -12,8 +10,9 @@ import (
 	"testing"
 )
 
+//逐行读取.csv文件
 func TestBufioread(t *testing.T) {
-	reader := bufio.NewReader(os.Stdin)
+	reader := bufio.NewReader(os.Stdin) //不适合test，放在main函数；go run后，输入任意一行字符即返回打印。
 	input, err := reader.ReadString('\n')
 	if err != nil {
 		log.Fatal(err)
@@ -42,4 +41,23 @@ func TestCsv(t *testing.T) {
 		}
 		fmt.Println(row[1])
 	}
+}
+
+func TestReadScan(t *testing.T) {
+	wordfile, err := os.Open(`dict.txt`)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer wordfile.Close()
+
+	done := make(chan bool)
+	scanner := bufio.NewScanner(wordfile)
+	go func() {
+		for scanner.Scan() {
+			pass := scanner.Text()
+			fmt.Println(pass)
+		}
+		done <- true
+	}()
+	<-done
 }
