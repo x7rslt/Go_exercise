@@ -61,6 +61,10 @@ func TestFindStringIndex(t *testing.T) {
 	re := regexp.MustCompile(`g([a-z]*)g`)
 	fmt.Println(re.FindStringIndex(`I like code golang program.`)) //output[12 18] is mean find start 12 end 18.
 }
+func TestFindStringSubmatch(t *testing.T) {
+	re := regexp.MustCompile(`((\w){4,20})@163\.com`)
+	fmt.Println(re.FindStringSubmatch("My email address is behappy@163.com,what's your's?"))
+}
 
 func TestRegexReplace(t *testing.T) {
 	re := regexp.MustCompile(`g([a-z]+)ng`)
