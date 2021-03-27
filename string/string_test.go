@@ -21,7 +21,6 @@ func Test(t *testing.T) {
 }
 
 //定义IP地址的打印格式
-
 type IP [4]int
 
 func (i IP) String() {
