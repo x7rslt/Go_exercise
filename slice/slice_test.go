@@ -77,7 +77,7 @@ func PrintPerson(p *Person) {
 func (p *Person) Print() {
 	fmt.Println(p.Name, p.Age, p.Sexual)
 }
-
+//在 Go 语言中，使用“成员函数”的方式叫“Receiver”，这种方式是一种封装，因为 PrintPerson()本来就是和 Person强耦合的，所以，理应放在一起。
 func TestStruct(t *testing.T) {
 	var p = Person{
 		Name:   "Xiao",
