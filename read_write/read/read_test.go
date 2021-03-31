@@ -5,10 +5,27 @@ import (
 	"encoding/csv"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
 	"os"
 	"testing"
 )
+
+func TestReadAll(t *testing.T) {
+	file, err := os.Open("dict.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	data, err := ioutil.ReadAll(file)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("Data as hex:%x\n", data)
+	fmt.Printf("Data as string:%s\n", data)
+	fmt.Printf("Number of bytes read:%d", len(data))
+
+}
 
 //逐行读取.csv文件
 func TestBufioread(t *testing.T) {
