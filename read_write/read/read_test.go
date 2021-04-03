@@ -78,3 +78,16 @@ func TestReadScan(t *testing.T) {
 	}()
 	<-done
 }
+
+func TestScan(t *testing.T) {
+	co := make(map[string]int)
+	scanner := bufio.NewScanner(os.Stdin)
+	for scanner.Scan() {
+		co[scanner.Text()]++
+	}
+	for line, n := range co {
+		if n > 1 {
+			fmt.Println(line, n)
+		}
+	}
+}
