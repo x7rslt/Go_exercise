@@ -78,9 +78,9 @@ func Url(f string) {
 			activeThreads -= 1
 		}
 		go func() {
-			link, err := Fetch(u)
+			link, err := Fetch("http://" + u)
 			if err != nil {
-				fmt.Printf("%s crawl error:%v", u, err)
+				fmt.Printf("%s crawl error:%v\n", u, err)
 			} else {
 				if link == "" {
 					fmt.Printf("%s 没有官网!\n", u)
@@ -102,7 +102,7 @@ func Url(f string) {
 func TestCrawl(t *testing.T) {
 	activeThreads = 0
 	maxThreads = 100
-	urlfile := "urls.txt"
+	urlfile := "topurl.txt"
 	done = make(chan bool)
 	start := time.Now()
 	Url(urlfile)
