@@ -76,3 +76,9 @@ func TestFor(t *testing.T) {
 		fmt.Println("lehehe")
 	}
 }
+
+func TestQuote(t *testing.T) {
+	a := "\n"
+	b := 'd'
+	fmt.Printf("Type : a %T,b %T", a, b)
+}
