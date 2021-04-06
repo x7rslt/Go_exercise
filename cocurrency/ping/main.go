@@ -10,6 +10,7 @@ import (
 //fake cocurrency
 func main() {
 	for {
+		fmt.Println("Ping")
 		ping()
 	}
 }
