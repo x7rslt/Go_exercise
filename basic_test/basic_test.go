@@ -5,6 +5,55 @@ import (
 	"testing"
 )
 
+//面向对象
+type IntCompare int
+
+func (a IntCompare) Big(b IntCompare) bool {
+	return a > b
+}
+func TestIntC1(t *testing.T) {
+	a := IntCompare(1)
+	b := IntCompare(2)
+	result := a.Big(b)
+	fmt.Println(result)
+}
+
+//面向过程
+func Big(a, b int) bool {
+	return a > b
+}
+func TestIncC2(t *testing.T) {
+	a, b := 2, 1
+	result := Big(a, b)
+	fmt.Println(result)
+}
+
+//错误的定义a值增加的方法
+type Integer int
+
+func (a Integer) Add(b Integer) {
+	a += b
+}
+
+func TestIntAdd(t *testing.T) {
+	a := Integer(1)
+	b := Integer(2)
+	a.Add(b)
+	fmt.Println(a)
+}
+
+//正确定义a值增加的方法，要用指针
+
+func (a *Integer) Add2(b Integer) {
+	*a += b
+}
+func TestIntAdd2(t *testing.T) {
+	a := Integer(1)
+	b := Integer(2)
+	a.Add2(b)
+	fmt.Println(a)
+}
+
 var str string
 var str2 = ""
 
