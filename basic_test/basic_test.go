@@ -131,3 +131,18 @@ func TestQuote(t *testing.T) {
 	b := 'd'
 	fmt.Printf("Type : a %T,b %T", a, b)
 }
+
+//值引用
+func TestValue(t *testing.T) {
+	a := [3]int{1, 2, 3}
+	b := a
+	b[1]++
+	fmt.Print(a, b)
+}
+
+func TestValue2(t *testing.T) {
+	a := [3]int{1, 2, 3}
+	b := &a
+	b[1]++
+	fmt.Println(a, *b)
+}
