@@ -26,13 +26,14 @@ func TestChannelN(t *testing.T) {
 		for i := 0; i < 10; i++ {
 			ch <- i
 		}
+		done <- struct{}{}
 	}()
 
 	go func() {
 		for v := range ch {
 			fmt.Println(v)
 		}
-		done <- struct{}{}
+
 	}()
 	<-done
 	fmt.Println("Main finished.")
