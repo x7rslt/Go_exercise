@@ -33,7 +33,6 @@ func TestChannelN(t *testing.T) {
 		for v := range ch {
 			fmt.Println(v)
 		}
-
 	}()
 	<-done
 	fmt.Println("Main finished.")
