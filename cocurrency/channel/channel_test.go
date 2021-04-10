@@ -30,7 +30,7 @@ func timer() {
 		timeout <- true
 	}()
 }
-func TestChannelTimeout2(t *testing.T) {
+func TestChannelTimeoutFunc(t *testing.T) {
 	ch := make(chan int)
 
 	timer()
