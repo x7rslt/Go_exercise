@@ -89,3 +89,20 @@ func TestChannel2(t *testing.T) {
 	runtime.Gosched()
 	fmt.Println("Done")
 }
+func TestChannel3(t *testing.T) {
+	ch := make(chan int, 10)
+	for i := 0; i < 10; i++ {
+		//fmt.Println(i)
+		go func(v int) {
+			//fmt.Println(i)
+			ch <- v
+		}(i)
+	}
+	close(ch)
+	for v := range ch {
+		fmt.Println(v)
+	}
+
+	runtime.Gosched()
+	fmt.Println("Done")
+}

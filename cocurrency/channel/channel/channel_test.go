@@ -2,6 +2,7 @@ package channel_test
 
 import (
 	"fmt"
+	"runtime"
 	"testing"
 )
 
@@ -50,4 +51,26 @@ func TestChannelWR(t *testing.T) {
 			fmt.Println("None action.")
 		}
 	}
+}
+
+func TestChannelClose(t *testing.T) {
+	ch := make(chan int)
+	go func() {
+		ch <- 1
+		close(ch)
+	}()
+
+	x, ok := <-ch
+	if ok {
+		fmt.Println("ok:", ok)
+		fmt.Println("Channel ch:", x)
+	}
+
+	x, ok = <-ch
+	if !ok {
+		fmt.Println("ok:", ok)
+		fmt.Println("Channel close:", x)
+	}
+	runtime.Gosched()
+	fmt.Println("Channel close test done.")
 }
