@@ -146,3 +146,13 @@ func TestValue2(t *testing.T) {
 	b[1]++
 	fmt.Println(a, *b)
 }
+
+func TestNil(t *testing.T) {
+	var both_nil interface{} = nil
+	fmt.Println("both_nil == nil", both_nil == nil)
+
+	var nil_ptr *string
+	var val_nil interface{} = nil_ptr
+
+	fmt.Println("val_nil==nil", val_nil == nil)
+}
