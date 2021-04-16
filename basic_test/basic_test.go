@@ -156,3 +156,10 @@ func TestNil(t *testing.T) {
 
 	fmt.Println("val_nil==nil", val_nil == nil)
 }
+
+//指针
+func TestPointer2(t *testing.T) {
+	var x int
+	p := &x
+	fmt.Println(x, *p, p)
+}
