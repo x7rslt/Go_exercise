@@ -42,7 +42,7 @@ func TestCloseChannel(t *testing.T) {
 var sum int
 
 func Sum(i int) {
-	sum += i
+	sum = sum + i
 }
 func GetSum() int {
 	return sum
@@ -62,6 +62,7 @@ func Sum2(i int) {
 	m.Lock()
 	defer m.Unlock()
 	sum2 += i
+	//fmt.Println(sum2)
 }
 
 func GetSum2() int {
@@ -73,7 +74,7 @@ func GetSum2() int {
 func TestCompeteSolve(t *testing.T) {
 	for i := 0; i < 10; i++ {
 		go Sum2(i)
+		runtime.Gosched()
 	}
-	runtime.Gosched()
-	fmt.Println(GetSum2())
+	fmt.Println("Sum:", GetSum2())
 }
