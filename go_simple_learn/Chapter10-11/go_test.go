@@ -5,6 +5,7 @@ import (
 	"runtime"
 	"sync"
 	"testing"
+	"time"
 )
 
 func Food(c chan<- string) {
@@ -77,4 +78,31 @@ func TestCompeteSolve(t *testing.T) {
 		runtime.Gosched()
 	}
 	fmt.Println("Sum:", GetSum2())
+}
+
+//waitgroup
+
+var wg sync.WaitGroup
+
+func TestWg(t *testing.T) {
+	fmt.Println("可以点菜了吗？")
+
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		fmt.Println("老王还没到")
+		time.Sleep(1 * time.Second)
+		fmt.Println("老王到了")
+	}()
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		fmt.Println("老张还没到")
+		time.Sleep(1 * time.Second)
+		fmt.Println("老张到了")
+	}()
+	fmt.Println("等都到齐了")
+	wg.Wait()
+	fmt.Println("所有人都到了，可以点菜了！")
+
 }
