@@ -85,13 +85,13 @@ func TestMapAppend(t *testing.T) {
 
 	//Correct:
 	var m2 map[string]string = map[string]string{"xiao": "26", "zhang": "27", "wang": "28"}
-	var p2 []*string
+	var p2 []string
 	for k2, _ := range m2 {
 		v2 := m2[k2]
-		p2 = append(p2, &v2)
+		p2 = append(p2, v2)
 		fmt.Println("#P2 value :")
 		for _, i2 := range p2 {
-			fmt.Println(*i2)
+			fmt.Println(i2)
 		}
 	}
 }
