@@ -35,7 +35,7 @@ func main() {
 		name := c.PostForm("name")
 		c.String(200, "hello "+name)
 	})
-	//JSON
+	//JSON 美化输出
 	xiao := User{0, "xss", 28}
 	wang := User{1, "wang", 30}
 	zhang := User{2, "zhang", 28}

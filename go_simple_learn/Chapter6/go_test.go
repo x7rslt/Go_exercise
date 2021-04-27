@@ -95,3 +95,4 @@ func TestMapAppend(t *testing.T) {
 		}
 	}
 }
+
