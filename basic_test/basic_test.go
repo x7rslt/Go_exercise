@@ -2,6 +2,7 @@ package basic_test
 
 import (
 	"fmt"
+	"log"
 	"testing"
 )
 
@@ -162,4 +163,12 @@ func TestPointer2(t *testing.T) {
 	var x int
 	p := &x
 	fmt.Println(x, *p, p)
+}
+
+func TestLogFatal(t *testing.T) {
+	a := 1
+	if a == 2 {
+		log.Fatal("a = ", a)
+	}
+	log.Println("a 不等于2")
 }
