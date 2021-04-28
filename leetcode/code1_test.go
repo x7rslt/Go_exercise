@@ -20,3 +20,33 @@ func Test1(t *testing.T) {
 	}
 
 }
+
+//错题集：不知道为什么结果正负错误
+/*
+解析：
+因为取值范围：
+int8: -128 ~ 127
+int16: -32768 ~ 32767
+int32: -2147483648 ~ 2147483647
+int64: -9223372036854775808 ~ 9223372036854775807
+*/
+func arraySign(nums []int) int {
+	product := 1
+	for i := 0; i < len(nums); i++ {
+		fmt.Println(nums[i])
+		product *= nums[i]
+	}
+	fmt.Println(product)
+	if product > 0 {
+		return 1
+	} else if product < 0 {
+		return -1
+	} else {
+		return 0
+	}
+}
+
+func Test2(t *testing.T) {
+	nums := []int{9, 72, 34, 29, -49, -22, -77, -17, -66, -75, -44, -30, -24}
+	fmt.Println(arraySign(nums))
+}
