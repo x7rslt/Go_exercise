@@ -2,6 +2,7 @@ package code1_test
 
 import (
 	"fmt"
+	"sort"
 	"testing"
 )
 
@@ -49,4 +50,24 @@ func arraySign(nums []int) int {
 func Test2(t *testing.T) {
 	nums := []int{9, 72, 34, 29, -49, -22, -77, -17, -66, -75, -44, -30, -24}
 	fmt.Println(arraySign(nums))
+}
+
+func maxIceCream(costs []int, coins int) int {
+	sort.Ints(costs)
+	result := 0
+	for i := 0; i < len(costs); i++ {
+		if coins >= costs[i] {
+			coins -= costs[i]
+			fmt.Println(costs[i])
+			result++
+			continue
+		}
+		break
+	}
+	return result
+}
+func Test3(t *testing.T) {
+	consts := []int{1, 3, 2, 4, 1}
+	coins := 12
+	fmt.Println(maxIceCream(consts, coins))
 }
