@@ -1,7 +1,9 @@
 package test
 
 import (
+	"fmt"
 	"net/http"
+	"os"
 	"testing"
 
 	"go.uber.org/zap"
@@ -30,6 +32,9 @@ func GetWeb(url string) {
 }
 
 func TestZap(t *testing.T) {
+	path := "./root"
+	s, err := os.Stat(path)
+	fmt.Println(s, err)
 	logmsg()
 	defer logger.Sync()
 	url := "www.baidu.com"

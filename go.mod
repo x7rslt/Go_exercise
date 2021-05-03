@@ -3,6 +3,7 @@ module Go_exercise
 go 1.15
 
 require (
+	github.com/PuerkitoBio/goquery v1.6.1 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
 	github.com/gin-gonic/gin v1.7.1 // indirect
 	github.com/google/gopacket v1.1.19
