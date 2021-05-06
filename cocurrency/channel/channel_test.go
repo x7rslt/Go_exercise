@@ -106,3 +106,35 @@ func TestChannel3(t *testing.T) {
 	runtime.Gosched()
 	fmt.Println("Done")
 }
+
+func MoreFast(i int, done chan bool) {
+	fmt.Println(i)
+	time.Sleep(2 * time.Second)
+	fmt.Println(i, " time done.")
+	done <- true
+}
+
+func TestActiveThread(t *testing.T) {
+	activeThreads := 0
+	maxThreads := 10
+	done := make(chan bool)
+
+	num := 0
+	for i := 0; i < 20; i++ {
+		go MoreFast(num, done)
+		activeThreads++
+
+		if activeThreads >= maxThreads {
+			<-done
+			activeThreads -= 1
+		}
+		num++
+	}
+
+	//等待所有go routine完成，在进行下一步输出“Done”；如果没有这段会在部分go routine未结束时输出 Done。
+	for activeThreads > 0 {
+		<-done
+		activeThreads -= 1
+	}
+	fmt.Println("Done")
+}

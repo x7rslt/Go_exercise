@@ -28,3 +28,17 @@ func WebScrap() {
 func TestGoquery(t *testing.T) {
 	WebScrap()
 }
+
+func TestFunc(t *testing.T) {
+	add := func(x, y int) {
+		fmt.Println(x + y)
+
+	}
+	add(1, 2)
+
+	add2 := func(x, y int) int {
+		return x + y
+
+	}(2, 3)
+	fmt.Println(add2)
+}
