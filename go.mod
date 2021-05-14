@@ -10,6 +10,7 @@ require (
 	github.com/google/gopacket v1.1.19
 	github.com/jinzhu/gorm v1.9.16
 	github.com/josharian/impl v1.0.0 // indirect
+	github.com/tatsushid/go-fastping v0.0.0-20160109021039-d7bb493dee3e // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.16.0 // indirect
 	golang.org/x/crypto v0.0.0-20210218145215-b8e89b74b9df

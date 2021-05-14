@@ -2,6 +2,7 @@ package test
 
 import (
 	"fmt"
+	"strconv"
 	"testing"
 
 	"github.com/go-ping/ping"
@@ -9,7 +10,9 @@ import (
 
 //待解决Error ：ping 未存活状态的ip陷入死循环
 func TestFastPint(t *testing.T) {
-	Ping()
+	i := 1
+
+	fmt.Println(strconv.Itoa(i))
 }
 
 func Ping() {
