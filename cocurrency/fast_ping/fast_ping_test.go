@@ -2,9 +2,12 @@ package test
 
 import (
 	"fmt"
+	"net"
+	"os"
 	"testing"
+	"time"
 
-	"github.com/go-ping/ping"
+	"github.com/tatsushid/go-fastping"
 )
 
 //待解决Error ：ping 未存活状态的ip陷入死循环
@@ -13,16 +16,21 @@ func TestFastPint(t *testing.T) {
 }
 
 func Ping() {
-
-	pinger, err := ping.NewPinger("120.55.49.8")
+	p := fastping.NewPinger()
+	ra, err := net.ResolveIPAddr("ip4:icmp", os.Args[1])
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
+		os.Exit(1)
 	}
-	pinger.Count = 3
-	err = pinger.Run() // Blocks until finished.
+	p.AddIPAddr(ra)
+	p.OnRecv = func(addr *net.IPAddr, rtt time.Duration) {
+		fmt.Printf("IP Addr: %s receive, RTT: %v\n", addr.String(), rtt)
+	}
+	p.OnIdle = func() {
+		fmt.Println("finish")
+	}
+	err = p.Run()
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
 	}
-	stats := pinger.Statistics() // get send/receive/duplicate/rtt stats
-	fmt.Println(stats)
 }
