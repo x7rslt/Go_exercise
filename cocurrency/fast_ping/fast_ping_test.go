@@ -2,8 +2,12 @@ package test
 
 import (
 	"fmt"
+<<<<<<< HEAD
 	"net"
 	"os"
+=======
+	"strconv"
+>>>>>>> 0237545dcafcb5112f488bbbf665beec237a545c
 	"testing"
 	"time"
 
@@ -12,7 +16,9 @@ import (
 
 //待解决Error ：ping 未存活状态的ip陷入死循环
 func TestFastPint(t *testing.T) {
-	Ping()
+	i := 1
+
+	fmt.Println(strconv.Itoa(i))
 }
 
 func Ping() {
