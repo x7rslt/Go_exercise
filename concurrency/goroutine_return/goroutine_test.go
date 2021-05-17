@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+//自定义类型，通过通道统一传递值
 type Result struct {
 	name   string
 	length int
