@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	var test model.Hotel
+	test := new(model.Hotel)
 	fmt.Println(test)
 }
