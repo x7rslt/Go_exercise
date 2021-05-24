@@ -58,7 +58,7 @@ type User struct {
 
 func Test(t *testing.T) {
 	var users []*User
-	db, _ := gorm.Open("mysql", "root:Xss8271329.X@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
+	db, _ := gorm.Open("mysql", "root:Xss8271329@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
 	defer db.Close()
 	req := ListQuery{1, 2}
 	limit, offset := Page(req.PageSize, req.Page) // 分页

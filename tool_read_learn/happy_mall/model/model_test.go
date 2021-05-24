@@ -34,7 +34,7 @@ func TestJson(t *testing.T) {
 
 //数据表自动迁移初始化
 func TestGormMigrate(t *testing.T) {
-	db, _ := gorm.Open("mysql", "root:Xss8271329.X@tcp(167.99.155.35:3306)/gorm?charset=utf8&parseTime=True&loc=Local")
+	db, _ := gorm.Open("mysql", "root:Xss8271329@tcp(167.99.155.35:3306)/gorm?charset=utf8&parseTime=True&loc=Local")
 	defer db.Close()
 	db.SingularTable(true)    //单数格式，例：创建user表，而不是users；
 	db.AutoMigrate(&Banner{}) //Gorm mysql 自动迁移初始化，创建Banner表,表字段由gorm:"column:banner_id"设置，column为gorm tag参数；
@@ -42,7 +42,7 @@ func TestGormMigrate(t *testing.T) {
 
 //插入数据
 func TestInsert(t *testing.T) {
-	db, _ := gorm.Open("mysql", "root:Xss8271329.X@tcp(167.99.155.35:3306)/gorm?charset=utf8&parseTime=True&loc=Local")
+	db, _ := gorm.Open("mysql", "root:Xss8271329@tcp(167.99.155.35:3306)/gorm?charset=utf8&parseTime=True&loc=Local")
 	defer db.Close()
 	db.SingularTable(true)
 	ba := Banner{"2", "http://www.test.com", "http://www.test.com", 666, "test", "test"} //Banner赋值
@@ -54,7 +54,7 @@ func TestInsert(t *testing.T) {
 func TestQuery(t *testing.T) {
 	var ba Banner
 	var bas []Banner
-	db, _ := gorm.Open("mysql", "root:Xss8271329.X@tcp(167.99.155.35:3306)/gorm?charset=utf8&parseTime=True&loc=Local")
+	db, _ := gorm.Open("mysql", "root:Xss8271329@tcp(167.99.155.35:3306)/gorm?charset=utf8&parseTime=True&loc=Local")
 	defer db.Close()
 	db.SingularTable(true)
 	db.First(&ba) // Get the first record ordered by primary key = SELECT * FROM users ORDER BY id LIMIT 1;
@@ -77,7 +77,7 @@ type User struct {
 
 func TestGetUserList(t *testing.T) {
 	var users []*User
-	db, _ := gorm.Open("mysql", "root:Xss8271329.X@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
+	db, _ := gorm.Open("mysql", "root:Xss8271329@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
 	defer db.Close()
 	db.SingularTable(true)
 	if err := db.Find(&users).Error; err != nil {
@@ -90,7 +90,7 @@ func TestGetUserList(t *testing.T) {
 func TestUpdate(t *testing.T) {
 	var ba Banner
 	var bas []Banner
-	db, _ := gorm.Open("mysql", "root:Xss8271329.X@tcp(167.99.155.35:3306)/gorm?charset=utf8&parseTime=True&loc=Local")
+	db, _ := gorm.Open("mysql", "root:Xss8271329@tcp(167.99.155.35:3306)/gorm?charset=utf8&parseTime=True&loc=Local")
 	defer db.Close()
 	db.SingularTable(true)
 	//注意是字段列全更新

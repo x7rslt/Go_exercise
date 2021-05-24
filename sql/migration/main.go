@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	db, _ := gorm.Open("mysql", "root:Xss8271329.X@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
+	db, _ := gorm.Open("mysql", "root:Xss8271329@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
 	defer db.Close()
 	db.SingularTable(true)
 	//db.AutoMigrate(&model.Banner{}, &model.Category{}, &model.OrderItem{}, &model.Order{}, &model.Product{}, &model.ShoppingCartItem{}, &model.Stock{}, &model.User{})*/

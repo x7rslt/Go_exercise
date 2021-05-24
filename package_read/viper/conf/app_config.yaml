@@ -6,6 +6,6 @@ database:
   name: db
   addr: 167.99.155.35:3306
   username: root
-  password: Xss8271329.X
+  password: Xss8271329
 wx_app_id: 123
 wx_secret: 123

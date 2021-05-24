@@ -48,7 +48,7 @@ func (repo *UserRepository) Add(user User) error {
 
 func TestGetUserList(t *testing.T) {
 	var users []User
-	db, _ := gorm.Open("mysql", "root:Xss8271329.X@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
+	db, _ := gorm.Open("mysql", "root:Xss8271329@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
 	defer db.Close()
 	db.SingularTable(true)
 	if err := db.Find(&users).Error; err != nil {
@@ -58,7 +58,7 @@ func TestGetUserList(t *testing.T) {
 }
 
 func TestUserContrl(t *testing.T) {
-	db, _ := gorm.Open("mysql", "root:Xss8271329.X@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
+	db, _ := gorm.Open("mysql", "root:Xss8271329@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
 	d := UserRepository{db}
 	newuser := User{"7", "x7rslt2", "10000000000", "12345678", "hangzho", false, false, time.Now(), time.Now()}
 	d.DB.SingularTable(true)
@@ -71,7 +71,7 @@ func TestUserContrl(t *testing.T) {
 }
 
 func TestWhere(t *testing.T) {
-	db, _ := gorm.Open("mysql", "root:Xss8271329.X@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
+	db, _ := gorm.Open("mysql", "root:Xss8271329@tcp(167.99.155.35:3306)/happy_mall?charset=utf8&parseTime=True&loc=Local")
 	db.SingularTable(true)
 
 	var user1 User
