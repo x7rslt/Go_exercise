@@ -3,8 +3,10 @@ package main
 import (
 	"fmt"
 
+	"github.com/gin-gonic/gin"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+	//"net/http"
 )
 
 type Comment struct {
@@ -24,16 +26,27 @@ type Comment struct {
 	IsGood int `json:"isGood"`
 }
 
+func (Comment) TablesName() string {
+	return "comment"
+}
 func main() {
 
-	dsn := "root:Xss8271329@tcp(114.116.230.93:3306)/food_app?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:Xss8271329.X@tcp(167.99.155.35:3306)/food_app?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	fmt.Println(db)
 	if err != nil {
 		fmt.Println(err)
 	}
 	var comment []Comment
-	result := db.Find(&comment)
-	fmt.Println(comment, result)
+	db.Find(&comment)
+	fmt.Println(comment)
+	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": comment,
+		})
+	})
+	r.Run()
 }
 
 /*
