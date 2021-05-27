@@ -1,12 +1,11 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/gin-gonic/gin"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	//"net/http"
+	"fmt"
 )
 
 type Comment struct {

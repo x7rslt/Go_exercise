@@ -31,8 +31,9 @@ func (Comment) TablesName() string {
 func main() {
 
 	dsn := "root:Xss8271329.X@tcp(167.99.155.35:3306)/food_app?charset=utf8mb4&parseTime=True&loc=Local"
-	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
-	fmt.Printf("%v", &schema.Namer{})
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{NamingStrategy: schema.NamingStrategy{
+		SingularTable: true, // use singular table name, table for `User` would be `user` with this option enabled
+	}})
 	fmt.Println(db)
 	if err != nil {
 		fmt.Println(err)
