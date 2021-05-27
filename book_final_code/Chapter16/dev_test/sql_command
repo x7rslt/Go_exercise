@@ -1,0 +1,17 @@
+#新建表
+create table comment(
+	commentid varchar(64),
+	comment text,
+	accountname varchar(32),
+	accountpic varchar(128),
+	star int,
+	averageperson int,
+	isgood int);
+
+//插入值
+insert into comment(
+	commentid,comment,accountname,accountpic,star,averageperson,isgood)
+	values ("1","这家饭店还不错，值得尝试，推荐菜养生黑豆腐","乐享生活","food.pic",1299,68,1);
+
+
+//
