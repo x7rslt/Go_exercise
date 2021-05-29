@@ -1,13 +1,18 @@
-package respository
+package repository
 
-import "dev_env/model"
+import (
+	"dev_env/model"
+	"log"
+)
 
 type CommentRepo struct {
 	DB model.DataBase
 }
 
-func (c *CommentRepo) GetCommentList() {
-	var commentList []mode.Comment
+func (c *CommentRepo) GetCommentList() model.Comment {
+	fmt.Println("Repository no probelom")
+	var commentList []model.Comment
 	c.DB.MyDB.Find(&commentList)
-	return commentList
+	log.Println(commentList)
+	return commentList[0]
 }

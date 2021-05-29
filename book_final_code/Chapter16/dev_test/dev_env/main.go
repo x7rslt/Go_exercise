@@ -14,6 +14,7 @@ var (
 
 func init() {
 	initHandler()
+	initDB()
 }
 
 func main() {
@@ -21,6 +22,6 @@ func main() {
 	defer model.DB.Close()
 	r := gin.New()
 	Load(r)
-	port := "8080"
-	log.Printf(http.ListenAndServe(port, r).Error())
+	port := ":8080"
+	log.Println(http.ListenAndServe(port, r).Error())
 }

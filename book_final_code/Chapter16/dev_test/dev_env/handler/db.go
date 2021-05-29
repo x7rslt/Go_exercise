@@ -1,35 +1,47 @@
 package handler
 
 import (
-	"dev_env/repository"
 	"dev_env/service"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"net/http"
-	"os"
 	"io/ioutil"
+	"log"
+	//"net/http"
+	"os"
 )
 
-const domain = "http://192.168.0.104:8080"
-
-type CommentHandler struc {
+type CommentHandler struct {
 	Srv *service.CommentService
 }
 
-func (h *CommentHandler) CommentList(c *gin.Context){
-	comments :=h.Srv.GetCommentList()
-	c.JSON(http.StatusOK,gin.H{
-		"items":comments,
-	}) 
+func (h *CommentHandler) CommentHandler(c *gin.Context) {
+	fmt.Println("Get Comments.")
+	comments := h.Srv.GetCommentList() //这里有问题
+	c.IndentedJSON(200, comments)
+
 }
 
-func ImageHandler(c *gin.Context){
+type User struct {
+	ID   int    `json:"id"`
+	Name string `json:"name"`
+	Age  int    `json:"age"`
+}
+
+func JsonHandler(c *gin.Context) {
+	//JSON 美化输出
+	xiao := User{0, "xss", 28}
+	wang := User{1, "wang", 30}
+	zhang := User{2, "zhang", 28}
+	c.IndentedJSON(200, []User{xiao, wang, zhang})
+}
+
+func ImageHandler(c *gin.Context) {
 	imageName := c.Query("imageName")
 	fmt.Println(imageName)
-	dir,_:= os.Getwd()
-	file,err := ioutil.ReadFile(dir +"/static/images/"+imageName+".png")
-	if err!=nil{
+	dir, _ := os.Getwd()
+	file, err := ioutil.ReadFile(dir + "/static/images/" + imageName + ".png")
+	if err != nil {
 		log.Println(err)
 	}
-	c.Write.WriteString(string(file))
+	c.Writer.WriteString(string(file))
 }

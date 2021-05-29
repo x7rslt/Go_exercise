@@ -10,24 +10,21 @@ import (
 
 type Comment struct {
 	//评论ID
-	CommentId string `json:"commentId"`
+	Commentid string `json:"commentid"`
 	//评论
 	Comment string `json:"comment"`
 	//评论人
-	AccountName string `json:"accountName"`
+	Accountname string `json:"accountname"`
 	//评论人头像
-	AccountPic string `json:"accountPic"`
+	Accountpic string `json:"accountpic"`
 	//评分
 	Star int `json:"star"`
 	//人均消费
-	AveragePerson int `json:"averagePerson"`
+	Averageperson int `json:"averageperson"`
 	//是否是优质点评
-	IsGood int `json:"isGood"`
+	Isgood int `json:"isgood"`
 }
 
-func (Comment) TablesName() string {
-	return "comment"
-}
 func main() {
 
 	dsn := "root:Xss8271329.X@tcp(167.99.155.35:3306)/food_app?charset=utf8mb4&parseTime=True&loc=Local"
@@ -40,6 +37,6 @@ func main() {
 	}
 	var comment []Comment
 
-	db.Find(&comment)
-	fmt.Println(comment)
+	db.First(&comment)
+	fmt.Println(comment[0])
 }
