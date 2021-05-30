@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	CommentHandler handler.CommentHandler
+	SuggestFoodHandler handler.SuggestFoodHandler
 )
 
 func init() {
