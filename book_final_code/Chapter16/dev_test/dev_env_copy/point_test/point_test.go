@@ -20,6 +20,6 @@ func TestPoint(t *testing.T) {
 	var shuai *People
 	fmt.Println(shuai)
 	xiao.Hello()
-	shuai = &People{"xiao", 12}
+	//shuai = &People{"xiao", 12}
 	shuai.Hello()
 }
