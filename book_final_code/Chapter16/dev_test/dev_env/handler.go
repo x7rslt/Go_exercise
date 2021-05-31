@@ -19,7 +19,7 @@ func initDB() {
 	fmt.Println("DB init")
 	var err error
 	dsn := "root:Xss8271329.X@tcp(167.99.155.35:3306)/food_app?charset=utf8mb4&parseTime=True&loc=Local"
-	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{NamingStrategy: schema.NamingStrategy{
+	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{NamingStrategy: schema.NamingStrategy{
 		SingularTable: true, // use singular table name, table for `User` would be `user` with this option enabled
 	}})
 	if err != nil {
@@ -27,7 +27,7 @@ func initDB() {
 	}
 	var comment []model.Comment
 
-	db.Find(&comment)
+	DB.Find(&comment)
 	fmt.Println(comment)
 	fmt.Println("数据库 init 结束...")
 }

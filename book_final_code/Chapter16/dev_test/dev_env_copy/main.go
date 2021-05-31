@@ -17,9 +17,10 @@ func Load() {
 	CommentHandler.CommentHandler()
 }
 func init() {
+	initDB()
 	initHandler()
 	fmt.Println("main init CommentHandler:", CommentHandler)
-	initDB()
+
 }
 
 func main() {

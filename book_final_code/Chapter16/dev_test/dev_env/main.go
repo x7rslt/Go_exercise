@@ -9,12 +9,13 @@ import (
 )
 
 var (
-	SuggestFoodHandler handler.SuggestFoodHandler
+	CommentHandler handler.CommentHandler
 )
 
 func init() {
-	initHandler()
 	initDB()
+	initHandler()
+
 }
 
 func main() {

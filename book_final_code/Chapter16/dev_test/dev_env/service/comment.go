@@ -9,6 +9,6 @@ type CommentService struct {
 	Repo repository.CommentRepo
 }
 
-func (c *CommentService) GetCommentList() model.Comment {
+func (c *CommentService) GetCommentList() []model.Comment {
 	return c.Repo.GetCommentList()
 }
