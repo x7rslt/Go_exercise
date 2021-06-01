@@ -1,4 +1,4 @@
-#新建表
+#Comment
 create table comment(
 	commentid varchar(64),
 	comment text,
@@ -12,6 +12,34 @@ create table comment(
 insert into comment(
 	commentid,comment,accountname,accountpic,star,averageperson,isgood)
 	values ("1","这家饭店还不错，值得尝试，推荐菜养生黑豆腐","乐享生活","food.pic",1299,68,1);
-
-
 //
+
+#Choosefood
+create table choosefood(
+	choosefoodid varchar(64),
+	choosename varchar(32)
+);
+
+insert into choosefood(
+	choosefoodid,choosename)
+	values ("001","养生黑豆腐");
+
+#CommentTag
+create table commenttag(tagid varchar(64),tagname varchar(32),tagnum int,hotelid varchar(64));
+
+insert into commenttag values("0001","好吃",2,"0001");
+
+create table discount(
+	id varchar(64),
+	discountid varchar(64),
+	discountItemIcon varchar(64),
+	discountItemSrc varchar(64),
+	discountItemTitle varchar(64),
+	discountItemHotel varchar(64),
+	DiscountItemGoodPrice int,
+	discountitemprice int,
+	discount varchar(64),
+	pos int
+);
+
+insert into discount values ("00002","000002","icon","假期优惠","暑假优惠活动","兄弟烧烤店",16,20,"8折",2);
