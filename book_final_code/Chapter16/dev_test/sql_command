@@ -43,3 +43,8 @@ create table discount(
 );
 
 insert into discount values ("00002","000002","icon","假期优惠","暑假优惠活动","兄弟烧烤店",16,20,"8折",2);
+
+create table guess(guessid varchar(64),src varchar(64),title varchar(64),`desc` text,goodprice varchar(32),price varchar(32),soldnum int);
+
+insert into guess(guessid,src,title,`desc`,goodprice,price,soldnum) values("0000001","guespic","猜你喜欢川菜","火锅、串串、重庆小面","199","299",100);
+insert into guess(guessid,src,title,`desc`,goodprice,price,soldnum) values("0000002","guespic2","猜你喜欢杭帮菜","小笼包、茶香鸡、东坡肉、西湖醋鱼、龙井虾仁","68","99",88);
