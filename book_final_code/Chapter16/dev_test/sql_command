@@ -25,7 +25,8 @@ insert into choosefood(
 	values ("001","养生黑豆腐");
 
 #CommentTag
-create table commenttag(tagid varchar(64),tagname varchar(32),tagnum int,hotelid varchar(64));
+create table commenttag(tagid varchar(64),tagname varchar(32),
+tagnum int,hotelid varchar(64));
 
 insert into commenttag values("0001","好吃",2,"0001");
 
@@ -48,3 +49,366 @@ create table guess(guessid varchar(64),src varchar(64),title varchar(64),`desc` 
 
 insert into guess(guessid,src,title,`desc`,goodprice,price,soldnum) values("0000001","guespic","猜你喜欢川菜","火锅、串串、重庆小面","199","299",100);
 insert into guess(guessid,src,title,`desc`,goodprice,price,soldnum) values("0000002","guespic2","猜你喜欢杭帮菜","小笼包、茶香鸡、东坡肉、西湖醋鱼、龙井虾仁","68","99",88);
+
+#hotelfoodcategory
+create table hotelfoodcategory(
+	hotelfoodcategoryid varchar(64),
+	hotelfoodcategoryname varchar(64),
+	hotelid varchar(64)
+);
+
+insert into hotelfoodcategory(
+	hotelfoodcategoryid,
+	hotelfoodcategoryname,
+	hotelid
+) values ("00000001","炒菜","0001");
+
+#hotel 
+create table hotel(
+	hotelid varchar(64),
+	hotelname varchar(64),
+	pic varchar(64),
+	star int,
+	num int,
+	averageprice float,
+	taste float,
+	env float,
+	service float,
+	mapaddr text,
+	mapaddr2 text,
+	shorttype varchar(64),
+	business varchar(64),
+	bang varchar(64)
+);
+
+insert into hotel values(
+	"0001",
+	"宝中宝",
+	"pic1",
+	106,
+	87,
+	126,
+	3.7,
+	4.5,
+	4.7,
+	"杭州市西湖区",
+	"美食街102号",
+	"杭帮菜",
+	"8:00-14:00",
+	"杭帮菜推荐榜"
+);
+
+create table indexnavitem(
+	id varchar(64),
+	src varchar(64),
+	title varchar(64)
+);
+
+insert into indexnavitem values("1","indexnavitem id","今日首页推荐");
+
+create table market(
+	marketid varchar(64),
+	marketname varchar(64),
+	addr text,
+	shorttype varchar(64),
+	star int,
+	pic varchar(64)
+);
+
+insert into market values(
+	"000000001",
+	"银泰",
+	"杭州市西湖区城西银泰",
+	"综合商场",
+	1009,
+	"pic1"
+)
+
+create table meitem(
+	itemid varchar(64),
+	src varchar(64),
+	title varchar(64),
+	type varchar(64)
+)
+insert into meitem values (
+	"0000000001",
+	"personpic1",
+	"我的首页",
+	"普通会员"
+)
+
+create table nav (
+	navid varchar(64),
+	src varchar(64),
+	title varchar(64)
+)
+
+insert into nav values (
+	"1",
+	"navpic1",
+	"中餐"
+)
+
+create table orderseat (
+	orderseatid varchar(64),
+	hotelid varchar(64),
+	persons int,
+	datatime int,
+	mobile int,
+	roomtype int,
+	name varchar(64),
+	sex int,
+	message varchar(64)
+)
+
+insert into orderseat values(
+	"1",
+	"1",
+	2,
+	"2021-06-07",
+	15555001111,
+	1,
+	"王先生",
+	1,
+	"中午堵车晚点到"
+)
+
+create table restaurantnav (
+	navid varchar(64),
+	title varchar(64),
+	`desc` varchar(64),
+	src varchar(64),
+	level int
+)
+
+insert into restaurantnav(
+	navid,
+	title,
+	`desc`,
+	src,
+	level
+) values (
+	"1",
+	"热门美食",
+	"刚评选的好吃美食",
+	"srcpic",
+	1
+)
+
+create table restauranttabitem (
+	itemid varchar(64),
+	src varchar(64),
+	title varchar(64),
+	star float,
+	price varchar(64),
+	area varchar(64),
+	type varchar(64),
+	`desc` varchar(64),
+	team varchar(64),
+	quan varchar(64)
+)
+
+insert into restauranttabitem (
+	itemid,
+	src,
+	title,
+	star,
+	price,
+	area,
+	type,
+	`desc`,
+	team,
+	quan
+)values(
+	"1",
+	"restauranttableitem src",
+	"restauranttableitem",
+	123,
+	"23",
+	"西湖区",
+	"川菜",
+	"饭店介绍",
+	"优秀厨师团队",
+	"quan for what"
+)
+
+create table samecity (
+	id varchar(64),
+	title varchar(64),
+	photoaddr varchar(64),
+	distance varchar(64),
+	avatarurl varchar(64),
+	location varchar(64),
+	random int,
+	`desc` varchar(64)
+)
+
+insert into samecity (
+	id,
+	title,
+	photoaddr,
+	distance,
+	avatarurl,
+	location,
+	random,
+	`desc`
+) values (
+	"1",
+	"title",
+	"photoaddr",
+	"4km",
+	"avatarurl",
+	"hangzhou xihu",
+	1,
+	"desc for what"
+)
+
+create table suggest (
+	suggestid varchar(64),
+	keyword1 varchar(64),
+	keyword2 varchar(64),
+	keyword3 varchar(64),
+	src varchar(64),
+	foodname varchar(64),
+	icon varchar(64),
+	hotelname varchar(64),
+	joinpersons varchar(64),
+	price varchar(64),
+	goodprice varchar(64),
+	distance varchar(64),
+	level int
+)
+
+
+insert into suggest values (
+	"1",
+	"keyword1",
+	"keyword2",
+	"keyword3",
+	"srcpic",
+	"foodname",
+	"icon",
+	"hotelname",
+	"joinpersons",
+	"123",
+	"4km",
+	1,
+)
+
+create table suggestfood (
+	suggestfoodid varchar(64),
+	suggestfoodname varchar(64),
+	suggestpersons varchar(64)
+)
+
+insert into suggest values (
+	"1",
+	"红烧肉",
+	"陈先生"
+)
+
+create table takeout (
+	takeoutid varchar(64),
+	hotelfoodcategoryid varchar(64),
+	foodname varchar(64),
+	pic varchar(64),
+	monthsoldnum varchar(64),
+	zan int,
+	price int,
+	issuggest int ,
+	discountprice int ,
+	discount float
+)
+
+insert into takeout values(
+	"1",
+	"1",
+	"红烧鱼",
+	"foodpic1",
+	"123",
+	1,
+	1,
+	1,
+	1,
+	8.5
+)
+
+create table teamchoosefood (
+	teamchoosefoodid varchar(64),
+	teamchoosefoodname varchar(64)
+)
+
+insert into teamchoosefood values(
+	"1",
+	"团队套餐"
+)
+
+create table teamchooseitem(
+	teamchoose varchar(64),
+	teamchooseitemname varchar(64),
+	teamchooseitemtip varchar(64),
+	teamprice int
+ )
+
+ insert into teamchooseitem values(
+	 "teamchoose",
+	 "1",
+	 "干贝虾蟹粥",
+	 "两人份",
+	 "120"
+ )
+
+ create table teamdetail (
+	 teamdetailid varchar(64),
+	 teamdetailname varchar(64),
+	 policy varchar(64),
+	 tips varchar(64)
+ )
+
+ insert into teamdetail values(
+	 "1",
+	 "水饺团购",
+	 "买一送一",
+	 "使用建行卡优惠更多"
+ )
+
+ create table teampostorder (
+	 teampostorderid varchar(64),
+	 teamdetailid varchar(64),
+	 realprice int,
+	 quantity int,
+	 mobile varchar(64),
+	 name varchar(64),
+	 sex int ,
+	 message varchar(64)
+ )
+
+ insert into teampostorder values (
+	 "1",
+	 "1",
+	 80,
+	 12,
+	 "155550011111",
+	 "陈先生",
+	 1,
+	 "饿了，快点送"
+ )
+
+ create table team (
+	 teamid varchar(64),
+	 hotelid varchar(64),
+	 teamname varchar(64),
+	 price int,
+	 teamprice int,
+	 soldnum string
+ )
+
+ insert into team values(
+	 "1",
+	 "0001",
+	 "宝中宝",
+	 80,
+	 69,
+	 "123"
+
+ )
