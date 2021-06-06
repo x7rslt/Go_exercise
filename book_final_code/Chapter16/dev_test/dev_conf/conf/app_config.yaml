@@ -1,0 +1,11 @@
+runmode: debug
+addr: 9090
+url: http://127.0.0.1:9090
+max_check_count: 10
+database:
+  name: food_app
+  host: 167.99.155.35:3306
+  username: root
+  password: Xss8271329.X
+wx_app_id: 123
+wx_secret: 123
