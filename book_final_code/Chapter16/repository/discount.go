@@ -1,5 +1,9 @@
 package repository
 
+import (
+	"food/model"
+)
+
 type Discount struct {
 	DB model.DataBase
 }
