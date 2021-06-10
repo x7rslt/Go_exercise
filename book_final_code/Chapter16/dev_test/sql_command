@@ -412,3 +412,33 @@ create table teamchooseitem(
 	 "123"
 
  )
+#建立关系
+type User struct {
+	gorm.Model
+	Name      string
+	CompanyID int
+	Company   []Company `gorm:"foreignKey:CompanyID"`
+}
+
+type Company struct {
+	ID   int
+	Name string
+}
+
+CREATE TABLE `user` (
+  `name` varchar(64) DEFAULT NULL,
+  `companyid` int DEFAULT NULL,
+  KEY `companyid` (`companyid`),
+  CONSTRAINT `user_ibfk_1` FOREIGN KEY (`companyid`) REFERENCES `company` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `company` (
+  `id` int NOT NULL,
+  `name` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+ select user.`name`,id from user  inner join company on user.companyid = company.id;
+
+#https://blog.csdn.net/wzgbgz/article/details/99948990
