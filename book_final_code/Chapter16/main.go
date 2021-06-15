@@ -2,8 +2,14 @@ package main
 
 import (
 	"fmt"
+	"food/handler"
 	"food/model"
+
 	"github.com/spf13/viper"
+)
+
+var (
+	HotelDetailHandler handler.HotelDetailHandler
 )
 
 func main() {
