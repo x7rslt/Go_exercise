@@ -1,0 +1,8 @@
+2021-06-17 22:41:13	info	dev_mylog/mylog_test.go:102	a / b =5
+2021-06-17 22:41:13	info	dev_mylog/mylog_test.go:103	This is a info text test~~~~~~
+2021-06-17 22:41:19	info	dev_mylog/mylog_test.go:102	a / b =5
+2021-06-17 22:41:19	info	dev_mylog/mylog_test.go:103	This is a info text test~~~~~~
+2021-06-17 22:41:34	info	dev_mylog/mylog_test.go:102	a / b =5
+2021-06-17 22:41:34	info	dev_mylog/mylog_test.go:103	This is a info text test~~~~~~
+2021-06-17 22:42:21	info	dev_mylog/mylog_test.go:102	a / b =5
+2021-06-17 22:42:21	info	dev_mylog/mylog_test.go:103	This is a info text test~~~~~~
