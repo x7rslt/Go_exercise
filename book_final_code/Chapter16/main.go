@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"food/handler"
 	"food/model"
@@ -9,12 +10,29 @@ import (
 )
 
 var (
+	cfg                = flag.String("config", "", "")
 	HotelDetailHandler handler.HotelDetailHandler
 )
 
+func init() {
+	initViper()
+	initDB()
+	initHandler()
+}
+
 func main() {
-	test := new(model.Hotel)
-	fmt.Println(test)
-	parameter := viper.GetString("database.username")
-	fmt.Println(parameter)
+	flag.Parse()
+	if err := config.Init(*cfg);err!=nil{
+		panic(err)
+	}
+	model.DB.Init()
+	defer model.DB.Close()
+	r := gin.New()
+	Load(
+		r,middleware.ProcessTraceID()
+		middleware.Logging(),
+	)
+	port := viper.GetString("addr")
+	MyLog.Log.Info("开始监听端口：",port)
+	log.Printf(http.ListenAndServe(port,r),Error())
 }
