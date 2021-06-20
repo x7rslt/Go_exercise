@@ -1,11 +1,7 @@
 package test
 
 import (
-	"fmt"
-	"runtime"
-	"sync"
-	"testing"
-	"time"
+	...
 )
 
 func Food(c chan<- string) {
