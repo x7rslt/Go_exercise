@@ -1,7 +1,7 @@
 package dp_service
 
 import (
-	"book_final_code/Chapter16/repository"
+	"errors"
 	"food/model"
 	"food/repository"
 )
@@ -27,7 +27,7 @@ func (h *HotelService)GetHotelDetailByID(id string)(*model.Hotel,error){
 	teamList := h.TeamRepo.GetTeamListByHotelId(id)
 	hotel.TeamList = teamList
 	foodList := h.SuggestFoodRepo.GetFoodByHotelId(id)
-	hotel.FoodList = foodlist
+	hotel.FoodList = foodList
 	tagList := h.CommentTagRepo.GetCommentTagList(id)
 	hotel.CommentTagList = tagList
 	commentList := h.CommentRepo.GetCommentList(id)

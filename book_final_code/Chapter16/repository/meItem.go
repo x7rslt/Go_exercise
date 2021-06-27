@@ -1,7 +1,7 @@
 package repository
 
 import (
-	"Go-exercise/book_final_code/Chapter16/model"
+	"food/model"
 )
 
 type MeItemRepo struct {

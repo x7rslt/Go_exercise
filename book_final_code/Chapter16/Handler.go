@@ -1,13 +1,7 @@
 package main
 
 import (
-	"Go-exercise/book_final_code/Chapter16/model"
-	"Go-exercise/book_final_code/Chapter16/repository"
-	"Go-exercise/package_read/viper/conf"
-	"book_final_code/Chapter16/handler"
 	"fmt"
-	"food/conf"
-	"food/config"
 	"food/handler"
 	"food/model"
 	"food/repository"

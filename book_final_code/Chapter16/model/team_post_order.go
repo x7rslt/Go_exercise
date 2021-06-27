@@ -1,7 +1,7 @@
 package model
 
 type TeamPostOrder struct {
-	TeamPostOrder string `json:"teamPostOrderId"`
+	TeamPostOrderId string `json:"teamPostOrderId"`
 	TeamDetailId  string `json:"teamDetailId"`
 	RealPric      string `json:"realPrice"`
 	Quatity       int    `json:"quantity"`

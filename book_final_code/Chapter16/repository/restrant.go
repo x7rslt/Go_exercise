@@ -20,7 +20,7 @@ type RestaurantTabItemRepo struct {
 
 func (r *RestaurantTabItemRepo) ListGoodRestaurantTabItem() []model.RestaurantTableItem {
 	var items []model.RestaurantTableItem
-	r.DB.MyDB.find(&items)
+	r.DB.MyDB.Find(&items)
 	return items
 }
 

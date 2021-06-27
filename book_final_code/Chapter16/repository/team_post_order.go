@@ -17,7 +17,7 @@ func (t *TeamPostOrderRepo) Save(order model.TeamPostOrder) string {
 	}()
 	err := tx.Create(order).Error
 	if err != nil {
-		tx.Roolback()
+		tx.Rollback()
 		return ""
 	}
 	err = tx.Commit().Error

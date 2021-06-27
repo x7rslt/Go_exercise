@@ -18,7 +18,7 @@ var (
 func initDB() {
 	fmt.Println("DB init")
 	var err error
-	dsn := "root:Xss8271329.X@tcp(167.99.155.35:3306)/food_app?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:Xss8271329.X@tcp(114.116.230.93:3306)/food_app?charset=utf8mb4&parseTime=True&loc=Local"
 	DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{NamingStrategy: schema.NamingStrategy{
 		SingularTable: true, // use singular table name, table for `User` would be `user` with this option enabled
 	}})

@@ -1,8 +1,7 @@
 package handler
 
 import (
-	"book_final_code/Chapter16/service/dp_service"
-	"food/dp_service"
+	"food/service/dp_service"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

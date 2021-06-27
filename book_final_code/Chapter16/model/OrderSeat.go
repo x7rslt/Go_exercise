@@ -1,7 +1,7 @@
 package model
 
 type OrderSeat struct {
-	OrderSeat string `json:"orderSeatId"`
+	OrderSeatId string `json:"orderSeatId"`
 	HotelID   string `json:"hotelId"`
 	Persons   int    `json:"persons"`
 	DateTime  int64  `json:"datetime"`
