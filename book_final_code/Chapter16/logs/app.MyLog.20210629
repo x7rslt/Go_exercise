@@ -1,0 +1,11 @@
+2021-06-29 23:32:13	error	config/config.go:19	While parsing config: yaml: line 5: mapping values are not allowed in this context
+food/config.Init
+	/Users/xiaoshuai/Desktop/GoDatabase/src/Go-exercise/book_final_code/chapter16/config/config.go:19
+main.initViper
+	/Users/xiaoshuai/Desktop/GoDatabase/src/Go-exercise/book_final_code/chapter16/Handler.go:22
+main.init.0
+	/Users/xiaoshuai/Desktop/GoDatabase/src/Go-exercise/book_final_code/chapter16/main.go:23
+runtime.doInit
+	/usr/local/go/src/runtime/proc.go:6265
+runtime.main
+	/usr/local/go/src/runtime/proc.go:208

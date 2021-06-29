@@ -1,7 +1,6 @@
 package main
 
 import (
-	"food/handler"
 	"food/health"
 	"net/http"
 
@@ -16,13 +15,13 @@ func Load(engine *gin.Engine, middlewares ...gin.HandlerFunc) *gin.Engine {
 	})
 	check := engine.Group("/check")
 	{
-		check.Get("health", health.Health)
+		check.GET("health", health.Health)
 	}
 	dp := engine.Group("/v1/dp")
 	{
 		//dp.GET("/index",handler.IndexHandler)
 
-		dp.GET("/hotel/detail/:id", handler.HotelDetailHandler.HotelDetailHandler)
+		dp.GET("/hotel/detail/:id", HotelDetailHandler.HotelDetailHandler)
 	}
 	return engine
 }

@@ -2,7 +2,8 @@ package main
 
 import (
 	"flag"
-	"fmt"
+	"food/MyLog"
+	"food/config"
 	"food/handler"
 	"food/model"
 	"github.com/gin-gonic/gin"
@@ -38,5 +39,5 @@ func main() {
 	)
 	port := viper.GetString("addr")
 	MyLog.Log.Info("开始监听端口：",port)
-	log.Printf(http.ListenAndServe(port,r),Error())
+	log.Printf(http.ListenAndServe(port,r).Error())
 }

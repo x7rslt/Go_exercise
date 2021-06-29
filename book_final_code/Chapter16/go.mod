@@ -3,6 +3,7 @@ module food
 go 1.16
 
 require (
+	github.com/fsnotify/fsnotify v1.4.9
 	github.com/gin-gonic/gin v1.7.2
 	github.com/i-coder-robot/book_final_code v0.0.0-20210612113845-00ec2d69dc7e
 	github.com/jinzhu/gorm v1.9.16

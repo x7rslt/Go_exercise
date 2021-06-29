@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"food/conf"
+	"food/config"
 	"food/handler"
 	"food/model"
 	"food/repository"
@@ -31,6 +33,13 @@ func initDB() {
 		Password: viper.GetString("databse.password"),
 		DbName:   viper.GetString("databse.name"),
 	}
+	config := fmt.Sprintf("%s:$s@tcp(%s)/%s>parseTime=true&charset=utf8&parseTime=%t&loc=%s",
+		conf.User,
+		conf.Password,
+		conf.Host,
+		conf.DbName,
+		true,
+		"Local")
 	DB, err = gorm.Open("mysql", config)
 	if err != nil {
 		log.Fatalf("connect error:%v\n", err)

@@ -1,0 +1,11 @@
+runmode:debug
+addr:9090
+url:http://127.0.0.1:9090
+max_check_count:10
+database:
+  name:db
+  addr:167.99.155.35:3306
+  username:root
+  password:010101010
+wx_app_id:123
+wx_secret:123
