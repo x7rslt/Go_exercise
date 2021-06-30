@@ -30,16 +30,18 @@ func initDB() {
 	conf := &conf.DBConf{
 		Host:     viper.GetString("database.host"),
 		User:     viper.GetString("database.username"),
-		Password: viper.GetString("databse.password"),
-		DbName:   viper.GetString("databse.name"),
+		Password: viper.GetString("database.password"),
+		DbName:   viper.GetString("database.name"),
 	}
-	config := fmt.Sprintf("%s:$s@tcp(%s)/%s>parseTime=true&charset=utf8&parseTime=%t&loc=%s",
+	log.Println(conf)
+	config := fmt.Sprintf("%s:%s@tcp(%s)/%s?parseTime=true&charset=utf8&parseTime=%t&loc=%s",
 		conf.User,
 		conf.Password,
 		conf.Host,
 		conf.DbName,
 		true,
 		"Local")
+	log.Println(config)
 	DB, err = gorm.Open("mysql", config)
 	if err != nil {
 		log.Fatalf("connect error:%v\n", err)
