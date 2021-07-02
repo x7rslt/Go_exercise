@@ -9,6 +9,7 @@ require (
 	github.com/bitly/go-simplejson v0.5.0
 	github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869 // indirect
 	github.com/fsnotify/fsnotify v1.4.7
+	github.com/ghodss/yaml v1.0.0
 	github.com/gin-gonic/gin v1.7.1
 	github.com/go-ping/ping v0.0.0-20210506233800-ff8be3320020
 	github.com/go-sql-driver/mysql v1.6.0
