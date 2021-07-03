@@ -3,6 +3,7 @@ module Go_exercise
 go 1.15
 
 require (
+	github.com/360EntSecGroup-Skylar/excelize v1.4.1
 	github.com/BurntSushi/toml v0.3.1
 	github.com/PuerkitoBio/goquery v1.6.1
 	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d
