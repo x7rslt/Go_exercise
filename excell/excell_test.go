@@ -20,3 +20,26 @@ func TestExcell(t *testing.T){
 		os.Exit(1)
 	}
 }
+
+//读xlsx
+func TestExcellRead(t *testing.T){
+	f,err := excelize.OpenFile("Excell.xlsx")
+	if err != nil{
+		fmt.Println(err)
+		return
+
+	}
+	cell:= f.GetCellValue("Sheet1","B2")
+	fmt.Println(cell)
+	rows := f.GetRows("Sheet1")
+	for _,row := range rows{
+		for _,colCell := range row{
+			fmt.Println(colCell,"\t")
+
+		}
+		fmt.Println()
+	}
+
+
+
+}
