@@ -2,6 +2,7 @@ package handler
 
 import (
 	"food/service/dp_service"
+	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -15,6 +16,7 @@ type HotelDetailHandler struct {
 
 func (h *HotelDetailHandler) HotelDetailHandler(c *gin.Context) {
 	hotelId := c.Param("id")
+	log.Println("handler hotelid:",hotelId)
 
 	hotel, err := h.Srv.GetHotelDetailByID(hotelId)
 	if err != nil {

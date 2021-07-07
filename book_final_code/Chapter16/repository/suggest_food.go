@@ -10,7 +10,7 @@ type SuggestFoodRepo struct {
 
 func (s *SuggestFoodRepo) GetFoodByHotelId(hotelid string) []model.SuggestFood {
 	var foods []model.SuggestFood
-	s.DB.MyDB.Where("hotelid=?", hotelid).Find(&foods)
+	s.DB.MyDB.Where("hotel_id=?", hotelid).Find(&foods)
 	return foods
 }
 

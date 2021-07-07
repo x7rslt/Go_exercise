@@ -2,6 +2,7 @@ package repository
 
 import (
 	"food/model"
+	"log"
 )
 
 type TeamRepo struct {
@@ -10,7 +11,9 @@ type TeamRepo struct {
 
 func (t *TeamRepo) GetTeamListByHotelId(hotelId string) []model.Team {
 	var teamList []model.Team
-	t.DB.MyDB.Where("hotelid=?", hotelId).Find(&teamList)
+	t.DB.MyDB.Where("hotel_id=?", hotelId).Find(&teamList)
+	log.Println("Repository teamlist hotelid:",hotelId)
+	log.Println(teamList)
 	return teamList
 }
 

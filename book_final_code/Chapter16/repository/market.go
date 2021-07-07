@@ -10,6 +10,6 @@ type MarketRepo struct {
 
 func (m *MarketRepo) GetMarketInfo(hotelid string) model.Market {
 	var market model.Market
-	m.DB.MyDB.Where("hotelid=?", hotelid).Find(&market)
+	m.DB.MyDB.Where("hotel_id=?", hotelid).Find(&market)
 	return market
 }
