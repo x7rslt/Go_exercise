@@ -1,0 +1,265 @@
+2021-07-07 13:28:43	error	model/mysql.go:41	DataBase connnect failed.DataBase name:food,Error:invalid DSN: missing the slash separating the database name
+food/model.openDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:41
+food/model.InitSelfDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:55
+food/model.GetMySqlDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:28
+food/model.(*DataBase).Init
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:20
+main.main
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/main.go:33
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:225
+2021-07-07 13:35:58	error	model/mysql.go:41	DataBase connnect failed.DataBase name:food,Error:invalid DSN: missing the slash separating the database name
+food/model.openDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:41
+food/model.InitSelfDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:55
+food/model.GetMySqlDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:28
+food/model.(*DataBase).Init
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:20
+main.main
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/main.go:33
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:225
+2021-07-07 13:37:54	error	model/mysql.go:41	DataBase connnect failed.DataBase name:food,Error:invalid DSN: missing the slash separating the database name
+food/model.openDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:41
+food/model.InitSelfDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:55
+food/model.GetMySqlDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:28
+food/model.(*DataBase).Init
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:20
+main.main
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/main.go:33
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:225
+2021-07-07 13:44:35	error	model/mysql.go:42	DataBase connnect failed.DataBase name:food,Error:invalid DSN: missing the slash separating the database name
+food/model.openDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:42
+food/model.InitSelfDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:56
+food/model.GetMySqlDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:28
+food/model.(*DataBase).Init
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:20
+main.main
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/main.go:33
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:225
+2021-07-07 13:48:26	error	model/mysql.go:42	DataBase connnect failed.DataBase name:food,Error:invalid DSN: missing the slash separating the database name
+food/model.openDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:42
+food/model.InitSelfDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:56
+food/model.GetMySqlDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:28
+food/model.(*DataBase).Init
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:20
+main.main
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/main.go:33
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:225
+2021-07-07 13:52:23	error	model/mysql.go:42	DataBase connnect failed.DataBase name:food,Error:invalid DSN: missing the slash separating the database name
+food/model.openDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:42
+food/model.InitSelfDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:56
+food/model.GetMySqlDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:28
+food/model.(*DataBase).Init
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:20
+main.main
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/main.go:33
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:225
+2021-07-07 14:17:31	error	model/mysql.go:42	DataBase connnect failed.DataBase name:food,Error:invalid DSN: missing the slash separating the database name
+food/model.openDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:42
+food/model.InitSelfDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:56
+food/model.GetMySqlDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:28
+food/model.(*DataBase).Init
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:20
+main.main
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/main.go:33
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:225
+2021-07-07 14:17:48	error	model/mysql.go:42	DataBase connnect failed.DataBase name:food,Error:invalid DSN: missing the slash separating the database name
+food/model.openDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:42
+food/model.InitSelfDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:56
+food/model.GetMySqlDB
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:28
+food/model.(*DataBase).Init
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/model/mysql.go:20
+main.main
+	F:/GoDatabase/go-exercise/book_final_code/chapter16/main.go:33
+runtime.main
+	C:/Program Files/Go/src/runtime/proc.go:225
+2021-07-07 14:26:04	error	middleware/logging.go:52	invalid character 'A' looking for beginning of value
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.Logging.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/logging.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.ProcessTraceID.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/traceid.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.serveError
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:525
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:518
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	C:/Program Files/Go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	C:/Program Files/Go/src/net/http/server.go:1952
+2021-07-07 14:26:07	error	middleware/logging.go:52	invalid character 'A' looking for beginning of value
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.Logging.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/logging.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.ProcessTraceID.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/traceid.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.serveError
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:525
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:518
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	C:/Program Files/Go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	C:/Program Files/Go/src/net/http/server.go:1952
+2021-07-07 14:26:25	error	middleware/logging.go:52	invalid character 'A' looking for beginning of value
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.Logging.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/logging.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.ProcessTraceID.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/traceid.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.serveError
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:525
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:518
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	C:/Program Files/Go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	C:/Program Files/Go/src/net/http/server.go:1952
+2021-07-07 14:26:42	error	middleware/logging.go:52	invalid character 'A' looking for beginning of value
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.Logging.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/logging.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.ProcessTraceID.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/traceid.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.serveError
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:525
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:518
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	C:/Program Files/Go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	C:/Program Files/Go/src/net/http/server.go:1952
+2021-07-07 14:27:15	error	middleware/logging.go:52	invalid character 'A' looking for beginning of value
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.Logging.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/logging.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.ProcessTraceID.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/traceid.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.serveError
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:525
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:518
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	C:/Program Files/Go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	C:/Program Files/Go/src/net/http/server.go:1952
+2021-07-07 14:29:25	error	middleware/logging.go:52	invalid character 'A' looking for beginning of value
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.Logging.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/logging.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.ProcessTraceID.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/traceid.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.serveError
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:525
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:518
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	C:/Program Files/Go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	C:/Program Files/Go/src/net/http/server.go:1952
+2021-07-07 14:38:41	error	middleware/logging.go:52	invalid character 'A' looking for beginning of value
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.Logging.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/logging.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.ProcessTraceID.func1
+	F:/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/traceid.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.serveError
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:525
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:518
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	F:/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	C:/Program Files/Go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	C:/Program Files/Go/src/net/http/server.go:1952

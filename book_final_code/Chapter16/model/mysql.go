@@ -2,7 +2,7 @@ package model
 
 import (
 	"fmt"
-	"github.com/i-coder-robot/book_final_code/Chapter16/MyLog"
+	"food/MyLog"
 	"github.com/jinzhu/gorm"
 	// MySQL driver.
 	_ "github.com/jinzhu/gorm/dialects/mysql"
@@ -28,14 +28,15 @@ func GetMySqlDB() *gorm.DB {
 	return InitSelfDB()
 }
 func openDB(username, password, addr, name string) *gorm.DB {
-	config := fmt.Sprintf("%s:%s@tcp(%s)%s?parseTime=True&charset=utf8&parseTime=%t&loc=%s",
+	config := fmt.Sprintf("%s:%s@tcp(%s)/%s?parseTime=true&charset=utf8&parseTime=%t&loc=%s",
 		username,
 		password,
 		addr,
 		name,
 		true,
-		"loacl",
+		"Local",
 	)
+	fmt.Println("Model Mysql Config:",config)
 	db, err := gorm.Open("mysql", config)
 	if err != nil {
 		MyLog.Log.Errorf("DataBase connnect failed.DataBase name:%s,Error:%s", name, err.Error())
@@ -54,7 +55,7 @@ func setupDB(db *gorm.DB) {
 func InitSelfDB() *gorm.DB {
 	db := openDB(viper.GetString("database.username"),
 		viper.GetString("database.password"),
-		viper.GetString("database.addr"),
+		viper.GetString("database.host"),
 		viper.GetString("database.name"),
 	)
 	return db

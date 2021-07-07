@@ -1,7 +1,6 @@
 package MyLog
 
 import (
-	"errors"
 	"fmt"
 	"io"
 	"os"
@@ -80,12 +79,4 @@ func getWriter(filename string) io.Writer {
 		panic(err)
 	}
 	return hook
-}
-func Divide(a, b int) (int, error) {
-	if b != 0 {
-		c := a / b
-		return c, nil
-	} else {
-		return 0, errors.New("Func run error:b is 0")
-	}
 }

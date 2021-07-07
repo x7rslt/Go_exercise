@@ -41,7 +41,7 @@ func initDB() {
 		conf.DbName,
 		true,
 		"Local")
-	log.Println(config)
+	log.Println("Handler:",config)
 	DB, err = gorm.Open("mysql", config)
 	if err != nil {
 		log.Fatalf("connect error:%v\n", err)
