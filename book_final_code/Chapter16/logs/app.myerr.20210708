@@ -1,0 +1,44 @@
+2021-07-08 21:39:13	error	middleware/logging.go:52	invalid character 'O' looking for beginning of value
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.Logging.func1
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/logging.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.ProcessTraceID.func1
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/traceid.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:489
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1952
+2021-07-08 21:39:14	error	middleware/logging.go:52	invalid character 'A' looking for beginning of value
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.Logging.func1
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/logging.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.ProcessTraceID.func1
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/traceid.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.serveError
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:525
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:518
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/xiaoshuai/Desktop/GoDatabase/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1952

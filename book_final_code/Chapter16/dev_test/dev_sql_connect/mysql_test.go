@@ -6,6 +6,7 @@ import (
 	"log"
 	"testing"
 	// MySQL driver.
+	"food/model"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
@@ -42,7 +43,8 @@ func setupDB(db *gorm.DB) {
 
 func TestMysqlConnect(t *testing.T){
 	db:= openDB(username,password,addr,name)
-
-	fmt.Println(db)
+	var teamList []model.Team
+	db.Where("hotel_id=?", 1).Find(&teamList)
+	log.Println("Teamlist:",teamList)
 
 }
