@@ -1,0 +1,27 @@
+2021-07-09 19:00:58	info	chapter16/main.go:41	开始监听端口：:9090
+2021-07-09 19:01:39	info	middleware/logging.go:57	1.1577348s    | 127.0.0.1    | GET /v1/dp/hotel/detail/:1 | {code: 0, message: }
+2021-07-09 19:01:40	error	middleware/logging.go:52	invalid character 'A' looking for beginning of value
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.Logging.func1
+	C:/Users/x7rsl/go/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/logging.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/x7rsl/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/i-coder-robot/book_final_code/Chapter16/middleware.ProcessTraceID.func1
+	C:/Users/x7rsl/go/pkg/mod/github.com/i-coder-robot/book_final_code@v0.0.0-20210612113845-00ec2d69dc7e/Chapter16/middleware/traceid.go:17
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/x7rsl/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/x7rsl/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/x7rsl/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/context.go:165
+github.com/gin-gonic/gin.serveError
+	C:/Users/x7rsl/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:525
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/x7rsl/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:518
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/x7rsl/go/pkg/mod/github.com/gin-gonic/gin@v1.7.2/gin.go:445
+net/http.serverHandler.ServeHTTP
+	C:/Program Files/Go/src/net/http/server.go:2887
+net/http.(*conn).serve
+	C:/Program Files/Go/src/net/http/server.go:1952
+2021-07-09 19:01:40	info	middleware/logging.go:57	0s            | 127.0.0.1    | GET /favicon.ico | {code: 30001, message: invalid character 'A' looking for beginning of value}
+2021-07-09 19:01:43	info	middleware/logging.go:57	797.0676ms    | 127.0.0.1    | GET /v1/dp/hotel/detail/1 | {code: 0, message: }
